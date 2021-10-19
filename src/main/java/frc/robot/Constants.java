@@ -14,7 +14,16 @@ package frc.robot;
  */
 public final class Constants {
 
+	//Motor PWMs
 	public static final int LEFT_FRONT_MOTOR = 0;
 	public static final int LEFT_REAR_MOTOR = 2;
 	public static final int RIGHT_FRONT_MOTOR = 1;
-	public static final int RIGHT_REAR_MOTOR = 3;}
+	public static final int RIGHT_REAR_MOTOR = 3;
+
+
+
+	public static final double DRIVETRAIN_SPEED = .3;
+	public static final double DRIVETRAIN_BOOST = 1;
+
+
+}

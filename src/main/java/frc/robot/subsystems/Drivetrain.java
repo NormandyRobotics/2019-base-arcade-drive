@@ -4,6 +4,7 @@
 
 package frc.robot.subsystems;
 
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.PWMVictorSPX;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
@@ -41,17 +42,39 @@ public class Drivetrain extends SubsystemBase {
 
   }
 
-  public void driveWithJoysticks(){
+  public void driveWithJoysticks(Joystick driverJoystick, double speed)
+  {
+    speed = Constants.DRIVETRAIN_SPEED;
+    driveMotors.arcadeDrive(driverJoystick.getY()*speed, driverJoystick.getX());
+  }
+
+  public void spinInPlaceLeft(){
+    driveMotors.tankDrive(-1,1);
+    
+  }
+
+  public void spinInPlaceRight(){
+    driveMotors.tankDrive(1,-1);
 
   }
 
-  public void spinInPlace(){
+  public void rotateLeft(){
+    driveMotors.tankDrive(0, 1);
 
-    
+  }
+
+  public void rotateRight(){
+    driveMotors.tankDrive(1,0);
+
   }
 
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
+  }
+
+  public void stop(){
+    leftMotors.stopMotor();
+    rightMotors.stopMotor();
   }
 }

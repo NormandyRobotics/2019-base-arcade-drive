@@ -5,20 +5,50 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.Constants;
+import frc.robot.RobotContainer;
+import frc.robot.subsystems.Drivetrain;
 
 public class DriveWithJoysticks extends CommandBase {
+  public final Drivetrain driveTrain;
+
   /** Creates a new DriveWithJoysticks. */
-  public DriveWithJoysticks() {
-    // Use addRequirements() here to declare subsystem dependencies.
+  public DriveWithJoysticks(Drivetrain dt) {
+    driveTrain = dt;
+    addRequirements(driveTrain);
+   
   }
+
 
   // Called when the command is initially scheduled.
   @Override
-  public void initialize() {}
+  public void initialize() {
+ 
+  }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
-  public void execute() {}
+  public void execute() {
+
+    double speed = Constants.DRIVETRAIN_SPEED;
+
+  	if(RobotContainer.driverJoystick.getRawButton(Constants.D_JOY1) && RobotContainer.driverJoystick.getRawButton(Constants.D_JOY2))
+     {
+       speed = Constants.DRIVETRAIN_BOOST;
+        
+     }
+     else
+     {
+      speed = Constants.DRIVETRAIN_SPEED;
+
+      }
+     
+    driveTrain.driveWithJoysticks(RobotContainer.driverJoystick, speed);
+
+
+
+ 
+  }
 
   // Called once the command ends or is interrupted.
   @Override

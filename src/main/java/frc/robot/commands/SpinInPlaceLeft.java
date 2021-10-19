@@ -6,9 +6,9 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
-public class SpinInPlace extends CommandBase {
-  /** Creates a new SpinInPlace. */
-  public SpinInPlace() {
+public class SpinInPlaceLeft extends CommandBase {
+  /** Creates a new SpinInPlaceLeft. */
+  public SpinInPlaceLeft() {
     // Use addRequirements() here to declare subsystem dependencies.
   }
 
