@@ -7,6 +7,7 @@ package frc.robot;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import frc.robot.commands.DriveWithJoysticks;
 import frc.robot.subsystems.Drivetrain;
 
@@ -54,7 +55,37 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj.Joystick} or {@link XboxController}), and then passing it to a {@link
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
-  private void configureButtonBindings() {}
+  private void configureButtonBindings() {
+//create some buttons
+//final JoystickButton d_dpadUp = new JoystickButton(driverJoystick, Constants.D_DPAD_UP);
+//final JoystickButton d_dpadRight = new JoystickButton(driverJoystick, Constants.D_DPAD_RIGHT);
+//final JoystickButton d_dpadDown = new JoystickButton(driverJoystick, Constants.D_DPAD_DOWN);
+//final JoystickButton d_dpadLeft = new JoystickButton(driverJoystick, Constants.D_DPAD_LEFT);
+final JoystickButton d_l2 = new JoystickButton(driverJoystick, Constants.D_L2);
+final JoystickButton d_r2 = new JoystickButton(driverJoystick, Constants.D_R2);
+final JoystickButton d_l1 = new JoystickButton(driverJoystick, Constants.D_L1);
+final JoystickButton d_r1 = new JoystickButton(driverJoystick, Constants.D_R1);
+final JoystickButton d_joy1 = new JoystickButton(driverJoystick, Constants.D_JOY1);
+final JoystickButton d_joy2 = new JoystickButton(driverJoystick, Constants.D_JOY2);
+//final JoystickButton d_midLeft = new JoystickButton(driverJoystick, Constants.D_MIDLEFT);
+//final JoystickButton d_midRight = new JoystickButton(driverJoystick, Constants.D_MIDRIGHT);
+
+
+//final JoystickButton o_dpadUp = new JoystickButton(operatorJoystick, Constants.O_DPAD_UP);
+//final JoystickButton o_dpadRight = new JoystickButton(operatorJoystick, Constants.O_DPAD_RIGHT);
+//final JoystickButton o_dpadDown = new JoystickButton(operatorJoystick, Constants.O_DPAD_DOWN);
+//final JoystickButton o_dpadLeft = new JoystickButton(operatorJoystick, Constants.O_DPAD_LEFT);
+//final JoystickButton o_l2 = new JoystickButton(operatorJoystick, Constants.O_L2);
+//final JoystickButton o_r2 = new JoystickButton(operatorJoystick, Constants.O_R2);
+//final JoystickButton o_l1 = new JoystickButton(operatorJoystick, Constants.O_L1);
+//final JoystickButton o_r1 = new JoystickButton(operatorJoystick, Constants.O_R1);
+//final JoystickButton o_joy1 = new JoystickButton(operatorJoystick, Constants.O_JOY1);
+//final JoystickButton o_joy2 = new JoystickButton(operatorJoystick, Constants.O_JOY2);
+//final JoystickButton o_midLeft = new JoystickButton(driverJoystick, Constants.O_MIDLEFT);
+//final JoystickButton o_midRight = new JoystickButton(driverJoystick, Constants.O_MIDRIGHT);
+
+
+  }
 
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.

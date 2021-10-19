@@ -28,6 +28,10 @@ public final class Constants {
 	//Joystick buttons
 	public static final int D_JOY1 = 11;
 	public static final int D_JOY2 = 12;
+	public static final int D_L2 = 7;
+	public static final int D_R2 = 8;
+	public static final int D_R1 = 6;
+	public static final int D_L1 = 5;
 
 
 }
