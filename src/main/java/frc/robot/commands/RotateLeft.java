@@ -11,7 +11,7 @@ public class RotateLeft extends CommandBase {
   /** Creates a new RotateLeft. */
   public final Drivetrain driveTrain;
 
-  
+
   public RotateLeft(Drivetrain dt) {
     driveTrain = dt;
     addRequirements(driveTrain);
@@ -24,7 +24,9 @@ public class RotateLeft extends CommandBase {
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
-  public void execute() {}
+  public void execute() {
+    driveTrain.rotateLeft();
+  }
 
   // Called once the command ends or is interrupted.
   @Override

@@ -24,7 +24,9 @@ public class SpinInPlaceLeft extends CommandBase {
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
-  public void execute() {}
+  public void execute() {
+    driveTrain.spinInPlaceLeft();
+  }
 
   // Called once the command ends or is interrupted.
   @Override
