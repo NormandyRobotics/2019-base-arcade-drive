@@ -5,11 +5,17 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.subsystems.Drivetrain;
 
 public class SpinInPlaceRight extends CommandBase {
   /** Creates a new SpinInPlaceRight. */
-  public SpinInPlaceRight() {
+  public final Drivetrain driveTrain;
+
+  public SpinInPlaceRight(Drivetrain dt) {
     // Use addRequirements() here to declare subsystem dependencies.
+    driveTrain = dt;
+    addRequirements(driveTrain);
+
   }
 
   // Called when the command is initially scheduled.

@@ -6,10 +6,10 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
-import frc.robot.commands.ExampleCommand;
-import frc.robot.subsystems.Drivetrain;
-import frc.robot.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.commands.DriveWithJoysticks;
+import frc.robot.subsystems.Drivetrain;
+
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -19,14 +19,31 @@ import edu.wpi.first.wpilibj2.command.Command;
  */
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
-  private final Drivetrain driveTrain = new Drivetrain();
-  
-  private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
 
-  private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
+  // Declare Drivetrain
+  private final Drivetrain driveTrain;
+  private final DriveWithJoysticks driveWithJoysticks;
+
+
+  
+
+
+
+    //initialize drive
+    public static XboxController driverJoystick;
+    public static XboxController operatorJoystick;
+
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
+
+    // initialize drive values
+    driveTrain = new Drivetrain();
+    driveWithJoysticks = new DriveWithJoysticks(driveTrain);
+    driveWithJoysticks.addRequirements(driveTrain);
+    driveTrain.setDefaultCommand(driveWithJoysticks);  //set default command
+
+
     // Configure the button bindings
     configureButtonBindings();
   }
@@ -44,8 +61,12 @@ public class RobotContainer {
    *
    * @return the command to run in autonomous
    */
+
+
   public Command getAutonomousCommand() {
+    return driveWithJoysticks;
     // An ExampleCommand will run in autonomous
-    return m_autoCommand;
+    //return m_autoCommand;
   }
+
 }

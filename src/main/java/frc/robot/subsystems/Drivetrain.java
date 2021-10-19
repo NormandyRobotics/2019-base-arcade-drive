@@ -4,9 +4,9 @@
 
 package frc.robot.subsystems;
 
-import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.PWMVictorSPX;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
+import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
@@ -42,7 +42,7 @@ public class Drivetrain extends SubsystemBase {
 
   }
 
-  public void driveWithJoysticks(Joystick driverJoystick, double speed)
+  public void driveWithJoysticks(XboxController driverJoystick, double speed)
   {
     speed = Constants.DRIVETRAIN_SPEED;
     driveMotors.arcadeDrive(driverJoystick.getY()*speed, driverJoystick.getX());

@@ -25,5 +25,9 @@ public final class Constants {
 	public static final double DRIVETRAIN_SPEED = .3;
 	public static final double DRIVETRAIN_BOOST = 1;
 
+	//Joystick buttons
+	public static final int D_JOY1 = 11;
+	public static final int D_JOY2 = 12;
+
 
 }

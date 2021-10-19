@@ -5,10 +5,16 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.subsystems.Drivetrain;
 
 public class RotateLeft extends CommandBase {
   /** Creates a new RotateLeft. */
-  public RotateLeft() {
+  public final Drivetrain driveTrain;
+
+  
+  public RotateLeft(Drivetrain dt) {
+    driveTrain = dt;
+    addRequirements(driveTrain);
     // Use addRequirements() here to declare subsystem dependencies.
   }
 
