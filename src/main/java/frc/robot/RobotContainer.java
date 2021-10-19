@@ -9,6 +9,8 @@ import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import frc.robot.commands.DriveWithJoysticks;
+import frc.robot.commands.SpeedBoost;
+import frc.robot.commands.SpinInPlaceLeft;
 import frc.robot.subsystems.Drivetrain;
 
 
@@ -83,6 +85,13 @@ final JoystickButton d_joy2 = new JoystickButton(driverJoystick, Constants.D_JOY
 //final JoystickButton o_joy2 = new JoystickButton(operatorJoystick, Constants.O_JOY2);
 //final JoystickButton o_midLeft = new JoystickButton(driverJoystick, Constants.O_MIDLEFT);
 //final JoystickButton o_midRight = new JoystickButton(driverJoystick, Constants.O_MIDRIGHT);
+
+//Speed boost when left joystick button held
+d_joy1.whenHeld(new SpeedBoost(driveTrain));
+
+//Spin in place to the left when top left trigger pressed
+d_l1.whenPressed(new SpinInPlaceLeft(driveTrain));
+
 
 
   }

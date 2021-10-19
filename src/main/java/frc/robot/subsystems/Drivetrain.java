@@ -73,6 +73,10 @@ public class Drivetrain extends SubsystemBase {
     // This method will be called once per scheduler run
   }
 
+  public void setMaxOutput(double maxOutput){
+    driveMotors.setMaxOutput(maxOutput);
+  }
+
   public void stop(){
     leftMotors.stopMotor();
     rightMotors.stopMotor();
