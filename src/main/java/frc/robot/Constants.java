@@ -4,6 +4,8 @@
 
 package frc.robot;
 
+
+
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
  * constants. This class should not be used for any other purpose. All constants should be declared
@@ -22,7 +24,7 @@ public final class Constants {
 
 
 
-	public static final double DRIVETRAIN_SPEED = .3;
+	public static final double DRIVETRAIN_SPEED = 0.548; //sqrt(0.3)
 	public static final double DRIVETRAIN_BOOST = 1;
 
 	//Joystick buttons
