@@ -71,7 +71,7 @@ public class RobotContainer {
     final JoystickButton d_l1 = new JoystickButton(driverJoystick, Constants.D_L1);
     final JoystickButton d_r1 = new JoystickButton(driverJoystick, Constants.D_R1);
     final JoystickButton d_joy1 = new JoystickButton(driverJoystick, Constants.D_JOY1);
-    final JoystickButton d_joy2 = new JoystickButton(driverJoystick, Constants.D_JOY2);
+    //final JoystickButton d_joy2 = new JoystickButton(driverJoystick, Constants.D_JOY2);
     //final JoystickButton d_midLeft = new JoystickButton(driverJoystick, Constants.D_MIDLEFT);
     //final JoystickButton d_midRight = new JoystickButton(driverJoystick, Constants.D_MIDRIGHT);
 
