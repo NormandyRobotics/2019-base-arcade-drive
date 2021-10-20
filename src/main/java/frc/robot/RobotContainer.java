@@ -49,6 +49,10 @@ public class RobotContainer {
     driveWithJoysticks.addRequirements(driveTrain);
     driveTrain.setDefaultCommand(driveWithJoysticks);  //set default command
 
+    // initialize joystick values
+    driverJoystick = new XboxController(Constants.DRIVER_JOYSTICK);
+    operatorJoystick = new XboxController(Constants.OPERATOR_JOYSTICK);
+
 
     // Configure the button bindings
     configureButtonBindings();

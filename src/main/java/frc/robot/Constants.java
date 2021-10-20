@@ -33,5 +33,9 @@ public final class Constants {
 	public static final int D_R1 = 6;
 	public static final int D_L1 = 5;
 
+	//joystick ports
+	public static final int OPERATOR_JOYSTICK = 1;
+	public static final int DRIVER_JOYSTICK = 0;
+
 
 }
