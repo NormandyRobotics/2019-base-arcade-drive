@@ -23,15 +23,15 @@ public class DriveWithJoysticks extends CommandBase {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
- 
+    driveTrain.setMaxOutput(Constants.DRIVETRAIN_SPEED);
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
 
-    double speed = Constants.DRIVETRAIN_SPEED;
-
+    //double speed = Constants.DRIVETRAIN_SPEED;
+    /*
   	if(RobotContainer.driverJoystick.getRawButton(Constants.D_JOY1) && RobotContainer.driverJoystick.getRawButton(Constants.D_JOY2))
 
      {
@@ -43,9 +43,9 @@ public class DriveWithJoysticks extends CommandBase {
       speed = Constants.DRIVETRAIN_SPEED;
 
       }
-     
-    driveTrain.driveWithJoysticks(RobotContainer.driverJoystick, speed);
- 
+     */
+    driveTrain.driveWithJoysticks(RobotContainer.driverJoystick);
+      
   }
 
   // Called once the command ends or is interrupted.

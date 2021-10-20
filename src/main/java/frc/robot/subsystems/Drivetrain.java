@@ -42,10 +42,13 @@ public class Drivetrain extends SubsystemBase {
 
   }
 
-  public void driveWithJoysticks(XboxController driverJoystick, double speed)
+  public void driveWithJoysticks(XboxController driverJoystick)
   {
-    speed = Constants.DRIVETRAIN_SPEED;
-    driveMotors.arcadeDrive(driverJoystick.getY()*speed, driverJoystick.getX());
+    //speed = Constants.DRIVETRAIN_SPEED;
+    //driveMotors.arcadeDrive(driverJoystick.getY(), driverJoystick.getX());
+    driveMotors.arcadeDrive(driverJoystick.getRawAxis(Constants.DRIVER_JOYSTICK_LEFT_Y_AXIS),driverJoystick.getRawAxis(Constants.DRIVER_JOYSTICK_RIGHT_X_AXIS));
+
+
   }
 
   public void spinInPlaceLeft(){

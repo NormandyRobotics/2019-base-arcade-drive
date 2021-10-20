@@ -94,19 +94,19 @@ public class RobotContainer {
     //final JoystickButton o_midRight = new JoystickButton(driverJoystick, Constants.O_MIDRIGHT);
 
     //Speed boost when left joystick button held
-    d_joy1.whenHeld(new SpeedBoost(driveTrain));
+    d_joy1.whenPressed(new SpeedBoost(driveTrain));
 
     //Spin in place to the left when top left trigger pressed
-    d_l1.whenPressed(new SpinInPlaceLeft(driveTrain));
+    d_l1.whenHeld(new SpinInPlaceLeft(driveTrain));
 
     //Spin in place to the right when top right trigger pressed
-    d_r1.whenPressed(new SpinInPlaceRight(driveTrain));
+    d_r1.whenHeld(new SpinInPlaceRight(driveTrain));
 
     //Rotate left when bottom left trigger pressed
-    d_l2.whenPressed(new RotateLeft(driveTrain));
+    d_l2.whenHeld(new RotateLeft(driveTrain));
 
     //Rotate right when bottom right trigger pressed
-    d_r2.whenPressed(new RotateRight(driveTrain));
+    d_r2.whenHeld(new RotateRight(driveTrain));
 
   }
 

@@ -34,8 +34,17 @@ public final class Constants {
 	public static final int D_L1 = 5;
 
 	//joystick ports
-	public static final int OPERATOR_JOYSTICK = 1;
 	public static final int DRIVER_JOYSTICK = 0;
+	public static final int DRIVER_JOYSTICK_LEFT_X_AXIS = 0;
+	public static final int DRIVER_JOYSTICK_LEFT_Y_AXIS = 1;
+	public static final int DRIVER_JOYSTICK_RIGHT_X_AXIS = 2;
+	public static final int DRIVER_JOYSTICK_RIGHT_Y_AXIS = 3;
+
+	public static final int OPERATOR_JOYSTICK = 1;
+	public static final int OPERATOR_JOYSTICK_LEFT_X_AXIS = 0;
+	public static final int OPERATOR_JOYSTICK_LEFT_Y_AXIS = 1;
+	public static final int OPERATOR_JOYSTICK_RIGHT_X_AXIS = 2;
+	public static final int OPERATOR_JOYSTICK_RIGHT_Y_AXIS = 3;
 
 
 }
