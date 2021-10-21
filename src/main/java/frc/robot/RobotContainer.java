@@ -93,8 +93,6 @@ public class RobotContainer {
     //final JoystickButton o_midLeft = new JoystickButton(driverJoystick, Constants.O_MIDLEFT);
     //final JoystickButton o_midRight = new JoystickButton(driverJoystick, Constants.O_MIDRIGHT);
 
-    //Speed boost when left joystick button held
-    d_joy1.whenHeld(new SpeedBoost(driveTrain));
 
     //Spin in place to the left when top left trigger pressed
     d_l1.whenHeld(new SpinInPlaceLeft(driveTrain));
