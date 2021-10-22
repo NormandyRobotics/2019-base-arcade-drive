@@ -60,10 +60,21 @@ public class Drivetrain extends SubsystemBase {
     }
 
     driveMotors.setDeadband(0.09);
-    driveMotors.arcadeDrive(driverJoystick.getRawAxis(Constants.DRIVER_JOYSTICK_LEFT_Y_AXIS)*speed,driverJoystick.getRawAxis(Constants.DRIVER_JOYSTICK_LEFT_X_AXIS));
 
-    strafeMotor.set(ControlMode.PercentOutput, driverJoystick.getRawAxis(Constants.DRIVER_JOYSTICK_RIGHT_X_AXIS));
+    if (driverJoystick.getRawAxis(Constants.DRIVER_JOYSTICK_RIGHT_X_AXIS) > 0.1 || driverJoystick.getRawAxis(Constants.DRIVER_JOYSTICK_RIGHT_X_AXIS) < -0.1)
+    {
+     //if not strafing, standard arcade drive on left joystick
+      driveMotors.arcadeDrive(driverJoystick.getRawAxis(Constants.DRIVER_JOYSTICK_LEFT_Y_AXIS)*speed,driverJoystick.getRawAxis(Constants.DRIVER_JOYSTICK_LEFT_X_AXIS));
 
+      strafeMotor.set(ControlMode.PercentOutput, 0);
+    }
+    else
+    {
+      //if strafing, disable turn, throttle only
+      driveMotors.arcadeDrive(driverJoystick.getRawAxis(Constants.DRIVER_JOYSTICK_LEFT_Y_AXIS)*speed,0);
+
+      strafeMotor.set(ControlMode.PercentOutput, driverJoystick.getRawAxis(Constants.DRIVER_JOYSTICK_RIGHT_X_AXIS));
+    }
   }
   
 
