@@ -52,7 +52,8 @@ public class Drivetrain extends SubsystemBase {
       speed = Constants.DRIVETRAIN_SPEED;
     }
 
-    driveMotors.arcadeDrive(driverJoystick.getRawAxis(Constants.DRIVER_JOYSTICK_LEFT_Y_AXIS)*speed,driverJoystick.getRawAxis(Constants.DRIVER_JOYSTICK_RIGHT_X_AXIS));
+    driveMotors.setDeadband(0.09);
+    driveMotors.arcadeDrive(driverJoystick.getRawAxis(Constants.DRIVER_JOYSTICK_LEFT_Y_AXIS)*speed,driverJoystick.getRawAxis(Constants.DRIVER_JOYSTICK_LEFT_X_AXIS));
 
 
   }
