@@ -48,5 +48,9 @@ public final class Constants {
 	public static final int OPERATOR_JOYSTICK_RIGHT_X_AXIS = 2;
 	public static final int OPERATOR_JOYSTICK_RIGHT_Y_AXIS = 3;
 
+		//CAN IDs
+		public static final int PDP = 0;
+		public static final int STRAFE_MOTOR = 3;
+
 
 }

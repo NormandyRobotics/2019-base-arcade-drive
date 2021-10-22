@@ -4,6 +4,9 @@
 
 package frc.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.can.VictorSPX;
+
 import edu.wpi.first.wpilibj.PWMVictorSPX;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.XboxController;
@@ -21,6 +24,8 @@ public class Drivetrain extends SubsystemBase {
   SpeedControllerGroup rightMotors;
 
   DifferentialDrive driveMotors;
+
+  VictorSPX strafeMotor; //test code for potential H-drive strafe motor
   
   
   /** Creates a new Drivetrain. */
@@ -39,6 +44,8 @@ public class Drivetrain extends SubsystemBase {
 
     driveMotors = new DifferentialDrive(leftMotors, rightMotors);
 
+    strafeMotor = new VictorSPX(Constants.STRAFE_MOTOR);
+
 
   }
 
@@ -55,6 +62,7 @@ public class Drivetrain extends SubsystemBase {
     driveMotors.setDeadband(0.09);
     driveMotors.arcadeDrive(driverJoystick.getRawAxis(Constants.DRIVER_JOYSTICK_LEFT_Y_AXIS)*speed,driverJoystick.getRawAxis(Constants.DRIVER_JOYSTICK_LEFT_X_AXIS));
 
+    strafeMotor.set(ControlMode.PercentOutput, driverJoystick.getRawAxis(Constants.DRIVER_JOYSTICK_RIGHT_X_AXIS));
 
   }
   
